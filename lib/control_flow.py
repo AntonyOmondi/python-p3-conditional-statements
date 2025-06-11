@@ -36,7 +36,10 @@ def calculator(operation, num1, num2):
     elif operation == "*":
         return num1 * num2
     elif operation == "/":
-        return num1/num2
+        if num2 == 0:
+            return "Error: Division by Zero"
+        else:
+            return num1/num2
     else:
         print("Invalid operation!")
         return None
